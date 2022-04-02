@@ -1,17 +1,11 @@
 
 //i didnnt think this would be so complex
 
-var words = ["animatronics", "architectural_design", "biotechnology_design", "board game_design", "chapter_team", 
-"children's_stories", "coding", "computer integrated manufacturing", "computer-aided design (cad)", "cybersecurity", 
-"data science and analytics", "debating dechnological issues", "digital video production", "dragster design", 
-"engineering design", "essays on technology", "extemporaneous speech", "fashion design and technology", "flight endurance", 
-"forensic science", "future technology teacher",  "geospatial technology", "music Production", "on demand video", 
-"photographic technology", "prepared presentation", "promotional design", "scientific visualization (scivis)", 
-"software development", "structural design and engineering",  "system control technology", "technology bowl", 
-"technology problem Solving", "transportation Modeling", "vex robotics competition", "video game design", "webmaster",
+var words = ["design", "coding", "cybersecurity", "computer", "science", "data", "technology", "digital",
+"video", "dragster", "engineering", "robotics", "scivis", "cad", "software", "hardware", "system", "robotics", "videogame",
+"webmaster", "website",
 
-"Moneel Patel", "Lakshay Gupta", "Tyler Yan", "Ausmit Mondal", "Hazem Salem", "Ebaad Imran", "Edward Bemim", "Khoa Le",
-"Trinity Nguyen", "Santiago Espinoza", "Brian is cool"]
+"moneel", "lakshay", "tyler", "ausmit", "hazem", "ebaad", "edward", "khoa", "trinity", "santiago"]
 
 let answer = "";
 let maxWrong = "6";
@@ -25,9 +19,9 @@ function pickWord(){
 
 //I did this to make it quicker than copying a button 26 times but it actually took longer lmfao
 function generateKeyboard(){
-    let buttonsHTML = "abcdefghijklmnopqrstuvwxyz_()-',".split('').map(letter =>
+    let buttonsHTML = "abcdefghijklmnopqrstuvwxyz".split('').map(letter =>
     `
-    <button class="btn btn-sm btn-warning m-2" id='` + letter + `' onclick=handleGuess('` + letter + `')>
+    <button class="btn btn-sm btn-warning mt-2 mx-1" id='` + letter + `' onclick=handleGuess('` + letter + `')>
         `+ letter +`
     </button>
     `).join('');
@@ -39,21 +33,56 @@ function handleGuess(chosenLetter){
     guessed.indexOf(chosenLetter) === -1 ? guessed.push(chosenLetter) : null;
     document.getElementById(chosenLetter).setAttribute('disabled', true);
 
-    alert(answer);
-
     if (answer.indexOf(chosenLetter) >= 0) {
         guessedWord();
+        checkIfGameWon();
+    } else if (answer.indexOf(chosenLetter) === -1) {
+        mistakes++;
+        updateMistakes();
+        updateHangmanImg();
+        checkIfGameLost();
     }
 }
 
 function guessedWord() {
-    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : " _ ")).join('');
-  
+    wordStatus = answer.split('').map(letter => (guessed.indexOf(letter) >= 0 ? letter : "_ ")).join('');
+
     document.getElementById('wordSpotlight').innerHTML = wordStatus;
-  }
+}
+
+function updateHangmanImg(){
+    document.getElementById('hangmanImg').src = 'hangman' + mistakes + '.png';
+}
+
+function checkIfGameWon() {
+    if (wordStatus == answer) {
+      document.getElementById('keyboard').innerHTML = 'You Won!';
+    }
+}
+  
+function checkIfGameLost() {
+    if (mistakes == maxWrong){
+        document.getElementById('wordSpotlight').innerHTML = 'The answer was: ' + answer;
+        document.getElementById('keyboard').innerHTML = 'You Lost!';
+    }
+}
+
+function updateMistakes() {
+    document.getElementById('mistakes').innerHTML = mistakes;
+}
+  
+function reset() {
+    mistakes = 0;
+    guessed = [];
+    document.getElementById('hangmanImg').src = 'hangman0.png';
+    
+    updateMistakes();
+    pickWord();
+    guessedWord();
+    generateKeyboard();
+}
 
 document.getElementById('maxWrong').innerHTML = maxWrong;
-
 
 pickWord();
 generateKeyboard();

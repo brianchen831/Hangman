@@ -38,7 +38,7 @@
 <html lang="en">
 
 <head>
-    <title>Hangman | Play</title>
+    <title>Hangman TSA | Play</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
@@ -62,17 +62,31 @@
 
 <body class="hangman">
 
-    <div class="lightbox">
+    <div class="lightbox m-5">
         <div class="row">
-            <div class="col-lg-4"></div>
-            <div class="col-lg-4 mt-5" style="background-color: #fff">
-                <img src="hangman.png">
+            <div class="col-lg-2"></div>
+            <div class="col-lg-8" style="background-color: #fff">
+                <img id="hangmanImg" src="hangman0.png">
 
+                <hr class="dropdown-divider" />
+
+                <div class="text-center">
+                    <div>Wrong Guesses: <span id='mistakes'>0</span> of <span id="maxWrong"></span></div>
+                    <div>
+                        <p>Guess the word:</p>
+                    </div>
+                    <div>
+                        <p id="wordSpotlight"></p>
+                    </div>
+                    <div id="keyboard"></div>
+                    <button class="btn btn-danger mb-3" onclick="reset()">Reset</button>
+                </div>
             </div>
-            <div class="col-lg-4"></div>
+            <div class="col-lg-2"></div>
         </div>
     </div>
 
+    <script src="hangman.js"></script>
 </body>
 
 </html>
