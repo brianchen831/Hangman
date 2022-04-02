@@ -1,6 +1,3 @@
-
-//i didnnt think this would be so complex
-
 var words = [""]
 
 let answer = "";
@@ -13,7 +10,6 @@ function pickWord(){
     answer = words[Math.floor(Math.random() * words.length)];
 }
 
-//I did this to make it quicker than copying a button 26 times but it actually took longer lmfao
 function generateKeyboard(){
     let buttonsHTML = "abcdefghijklmnopqrstuvwxyz".split('').map(letter =>
     `
@@ -52,7 +48,7 @@ function updateHangmanImg(){
 
 function checkIfGameWon() {
     if (wordStatus == answer) {
-      document.getElementById('keyboard').innerHTML = 'You Won!';
+      document.getElementById('keyboard').innerHTML = '<p>You Won!</p>';
     }
 }
   
