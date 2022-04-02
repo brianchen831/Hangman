@@ -15,7 +15,11 @@
                             <font font face="Raleway">HOME</font>
                         </a>
                     </li>
-
+                    <li class="nav-item">
+                        <a class="nav-link nav-active" aria-current="page" href="customize.html">
+                            <font font face="Raleway">CUSTOMIZE HAROLD</font>
+                        </a>
+                    </li>
                 </ul>
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -38,7 +42,7 @@
         <div>
             <h1>
                 <font font face="Raleway">
-                    HANGMAN
+                    HAROLD THE HANGMAN
                 </font>
             </h1>
         </div>
@@ -79,13 +83,15 @@
             <div class="col-lg-4">
                 <div class="card">
                     <div class="shadow-5-strong">
-                        <img src="hangman.png" class="card-img-top"
-                            style="margin: auto; padding-top: 5%; padding-left: 5%; padding-right: 5%;
+                        <img src="hangman.png" class="card-img-top" style="margin: auto; padding-top: 5%; padding-left: 5%; padding-right: 5%;
                             width: 60%; object-fit: cover">
+                        <a href="customize.html" style="top: 0; position: absolute; margin-top: 7%">
+                            <input value="CUSTOMIZE" type="button" class="btn-comments btn btn-outline-info m-0">
+                        </a>
                     </div>
-                    <hr class="dropdown-divider"/>
+                    <hr class="dropdown-divider" />
                     <div class="card-body shadow-5-strong">
-                        <h5 class="card-title">Hangman: Classic Edition</h5>
+                        <h5 class="card-title"><font font face="Raleway">Hangman: Classic Edition</font></h5>
                         <a href="hangman.html">
                             <input value="PLAY" type="button" class="btn-comments btn btn-warning m-0">
                         </a>
@@ -96,13 +102,15 @@
             <div class="col-lg-4">
                 <div class="card">
                     <div class="shadow-5-strong">
-                        <img src="hangmanTSA.png" class="card-img-top"
-                            style="margin: auto; padding-top: 5%; padding-left: 5%; padding-right: 5%;
+                        <img src="hangmanTSA.png" class="card-img-top" style="margin: auto; padding-top: 5%; padding-left: 5%; padding-right: 5%;
                             width: 60%; object-fit: cover">
+                        <a href="customize.html" style="top: 0; position: absolute; margin-top: 7%">
+                            <input value="CUSTOMIZE" type="button" class="btn-comments btn btn-outline-primary m-0">
+                        </a>
                     </div>
-                    <hr class="dropdown-divider"/>
+                    <hr class="dropdown-divider" />
                     <div class="card-body shadow-5-strong">
-                        <h5 class="card-title">Hangman: TSA Edition</h5>
+                        <h5 class="card-title"><font font face="Raleway">Hangman: TSA Edition</font></h5>
                         <a href="hangmanTSA.html">
                             <input value="PLAY" type="button" class="btn-comments btn btn-danger m-0">
                         </a>
@@ -113,8 +121,55 @@
         </div>
     </div>
 
+    <div class="d-flex justify-content-center align-items-center mt-n3 mb-4">
+        <a>
+            <input type="button" value="HAROLD'S STORY" class="btn btn-lg btn-secondary" class="text-center"
+                data-mdb-toggle="modal" data-mdb-target="#exampleModal2">
+        </a>
+    </div>
+
+    <div class="modal top fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModal2Label" aria-hidden="true" data-mdb-backdrop="true" data-mdb-keyboard="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><font font face="Raleway">THE STORY OF HAROLD</font></h5>
+                </div>
+                <div class="modal-body">
+                    <img src="haroldPowers.png"><img src="hangman.png">
+                    <hr class="dropdown-divider" />
+                    <h4 class="my-4"><font font face="Raleway">How did Harold get here?</font></h4>
+                    <p class="mt-n2">
+                    <font font face="Raleway">
+                        Harold was born a poor kid in a poverty-struck land. However, despite the lack of support from his
+                        own family, friends, and village, he rose above the negativity, and through the power of his own
+                        individuality, Harold created a happy life for himself.
+                        <br><br>
+                        This act of courage attracted the interest of God, who granted Harold superhuman physique and powers.
+                        Harold used these powers to help people from around the world. However, upon hearing of this, people 
+                        around the world seeked to kill Harold in hope to obtain the powers for themselves. 
+                        <br><br>
+                        Harold was unable to defend him and his family from these hordes of individuals who eventually captured
+                        his family. In order to save his family, Harold offered himself up to the capturers, who hung him.
+                        <br><br>
+                        You found and infiltrated their secret base. They offered you to play a game of hangman against you with
+                        Harold's life on the line. You are the only one who can save Harold! With just one word, you can save
+                        his life. 
+                    </font>
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <a>
+                        <input type="button" class="btn btn-outline-dark" data-mdb-dismiss="modal" style="float: right" 
+                        value="CLOSE">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="mode.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.10.2/mdb.min.js"></script>
+
 </body>
 
 </html>
