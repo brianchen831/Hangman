@@ -1,5 +1,5 @@
 
-//i didnnt think this would be so complex
+//i didnt think this would be so complex
 
 var words = ["design", "coding", "cybersecurity", "computer", "science", "data", "technology", "digital",
 "video", "dragster", "engineering", "robotics", "scivis", "cad", "software", "hardware", "system", "robotics", "videogame",

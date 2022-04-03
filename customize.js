@@ -1,9 +1,11 @@
 //add customizations
 function s2c1(){
     document.getElementById('sec2').src = 'hangmanSection2Custom1.png';
+    localStorage.setItem('sec2', 'hangmanSection2Custom1.png');
 }
 function s2c2(){
     document.getElementById('sec2').src = 'hangmanSection2Custom2.png';
+    localStorage.setItem('hangmanSection2Custom1.png');
 }
 
 
@@ -27,9 +29,4 @@ function reset(){
     document.getElementById('sec2').src = 'hangmanSection2.png';
     document.getElementById('sec3').src = 'hangmanSection3.png';
     document.getElementById('sec4').src = 'hangmanSection4.png';
-}
-
-//store info to be used in hangman
-function save(){
-    
 }
