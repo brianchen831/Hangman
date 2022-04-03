@@ -1,7 +1,10 @@
+
+//i didnt think this would be so complex
+
 var words = [""]
 
 let answer = "";
-let maxWrong = "6";
+let maxWrong = "4";
 let mistakes = "0";
 let guessed = [];
 let wordStatus = null;
@@ -10,6 +13,7 @@ function pickWord(){
     answer = words[Math.floor(Math.random() * words.length)];
 }
 
+//I did this to make it quicker than copying a button 26 times but it actually took longer lmfao
 function generateKeyboard(){
     let buttonsHTML = "abcdefghijklmnopqrstuvwxyz".split('').map(letter =>
     `
@@ -43,7 +47,15 @@ function guessedWord() {
 }
 
 function updateHangmanImg(){
-    document.getElementById('hangmanImg').src = 'hangman' + mistakes + '.png';
+    if(mistakes == 1){
+        document.getElementById('hangmanImg1').src = localStorage.getItem('sec' + mistakes);
+    } else if (mistakes == 2){
+        document.getElementById('hangmanImg2').src = localStorage.getItem('sec' + mistakes);
+    } else if (mistakes == 3){
+        document.getElementById('hangmanImg3').src = localStorage.getItem('sec' + mistakes);
+    }else if (mistakes == 4){
+        document.getElementById('hangmanImg4').src = localStorage.getItem('sec' + mistakes);
+    }
 }
 
 function checkIfGameWon() {
@@ -66,7 +78,10 @@ function updateMistakes() {
 function reset() {
     mistakes = 0;
     guessed = [];
-    document.getElementById('hangmanImg').src = 'hangman0.png';
+    document.getElementById('hangmanImg1').src = '';
+    document.getElementById('hangmanImg2').src = '';
+    document.getElementById('hangmanImg3').src = '';
+    document.getElementById('hangmanImg4').src = '';
     
     updateMistakes();
     pickWord();
