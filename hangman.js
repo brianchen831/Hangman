@@ -5,7 +5,7 @@ var words = ["dog", "cat", "snake", "elephant", "zebra", "lion", "panther", "che
 "axolotl", "jellyfish", "shark", "salmon", "bass", "butterfly", "spider", "ant", "eel", "crab", "lobster, crayfish", 
 "rhino", "hippo", "giraffe", "pig", "hog", "goat", "sheep", "cow", "horse", "dolphin", "whale", "squid", "octopus",
 "anteater", "meerkat", "rat", "mouse", "bat", "badger", "weasel", "eagle", "hawk", "falcon", "parrot", "crow", "pigeon",
-"wolverine", "bear", "frog", "salamander"]
+"wolverine", "bear", "frog", "salamander", "alligator", "crocodile", "turtle", "lizard"]
 
 let answer = "";
 let maxWrong = "4";
