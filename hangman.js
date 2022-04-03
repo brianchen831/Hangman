@@ -1,7 +1,11 @@
 
-//i didnt think this would be so complex
+//i cant get a dictionary in js wtf
 
-var words = [""]
+var words = ["dog", "cat", "snake", "elephant", "zebra", "lion", "panther", "cheetah", "leapord", "cougar", "wolf",
+"axolotl", "jellyfish", "shark", "salmon", "bass", "butterfly", "spider", "ant", "eel", "crab", "lobster, crayfish", 
+"rhino", "hippo", "giraffe", "pig", "hog", "goat", "sheep", "cow", "horse", "dolphin", "whale", "squid", "octopus",
+"anteater", "meerkat", "rat", "mouse", "bat", "badger", "weasel", "eagle", "hawk", "falcon", "parrot", "crow", "pigeon",
+"wolverine", "bear", "frog", "salamander"]
 
 let answer = "";
 let maxWrong = "4";

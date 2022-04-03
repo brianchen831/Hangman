@@ -5,20 +5,22 @@
   background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 75%);
 }
 
-body.hangman{
-  height: 100%;
-  background-color: #ff4e00;
-  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 75%);
-}
-
-html.customize{
-  height: 100%;
-  background-color: #ff4e00;
-  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 75%);
+.headerCustomize{
+  height: 10vh;
 }
 
 body.customize{
-  height: 100%;
+  height: 100vh;
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 75%);
+}
+
+.headerHangman{
+  height: 10vh;
+}
+
+body.hangman{
+  height: 100vh;
   background-color: #ff4e00;
   background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 75%);
 }
@@ -33,5 +35,19 @@ body{
 
 p{
   font-family: Raleway;
+}
+
+.navbar-brand {
+  letter-spacing: 3px;
+  font-size: 1.75rem;
+  font-weight: 500;
+} 
+
+.navbar{
+  box-shadow: none;
+}
+
+.container-fluid {
+  box-shadow: 20px 20px 20px rgba(0, 0, 0, 0.1);
 }
 
