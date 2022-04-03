@@ -23,6 +23,10 @@ body.customize{
   background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 75%);
 }
 
+body{
+  overflow-x: hidden;
+}
+
 .hidden{
   display: none;
 }
